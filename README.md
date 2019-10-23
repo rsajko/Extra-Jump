@@ -3,7 +3,7 @@ Extra-Jump - это аркадная игра для вашего смартфо
 
 Платформа: Android
 
-[Диаграммы](https://github.com/rsajko/Extra-Jump/tree/master/Диагрыммы)
+[Диаграммы](https://github.com/rsajko/Extra-Jump/tree/master/Диаграммы)
 
 [Требования](https://github.com/rsajko/Extra-Jump/blob/master/Документация/Требования.md)
 
