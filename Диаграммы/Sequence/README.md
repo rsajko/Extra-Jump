@@ -13,7 +13,7 @@
 ## 1.2 Начать игру <a name="1.2"></a>
  ![Начать игру](https://github.com/rsajko/Extra-Jump/blob/master/Диаграммы/Sequence/2.%20Play(Sequense).png)
  
-## 1.3 Игровые астройки <a name="1.3"></a>
+## 1.3 Игровые настройки <a name="1.3"></a>
  ![Настройки](https://github.com/rsajko/Extra-Jump/blob/master/Диаграммы/Sequence/3.%20Settings.(Sequense)png.png)
 
 ## 1.4 Выход из игры <a name="1.4"></a>
