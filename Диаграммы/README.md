@@ -5,6 +5,8 @@
 2. [Activity](https://github.com/rsajko/Extra-Jump/tree/master/Диаграммы/Activity)
 3. [Sequence](https://github.com/rsajko/Extra-Jump/tree/master/Диаграммы/Sequence)
 4. [Class](https://github.com/rsajko/Extra-Jump/tree/master/Диаграммы/Class)
+6. [Deployment](https://github.com/rsajko/Extra-Jump/tree/master/Диаграммы/Deployment)
+
 
 
 
