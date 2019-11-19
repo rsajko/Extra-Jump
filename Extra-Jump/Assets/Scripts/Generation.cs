@@ -12,7 +12,6 @@ public class Generation : MonoBehaviour
     public float minY = .2f;
     public float maxY = 1.5f;
 
-    // Use this for initialization
     void Start()
     {
 

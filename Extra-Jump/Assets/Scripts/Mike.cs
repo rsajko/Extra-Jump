@@ -25,6 +25,14 @@ using UnityEngine;
             horizontal = Input.GetAxis("Horizontal");
         }
         rb.velocity = new Vector2(Input.GetAxis("Horizontal") * 10f, rb.velocity.y);
+        if (transform.position.x <-6f)
+        {
+            transform.position = new Vector2(transform.position.x * -1, transform.position.y);
+        }
+        else if(transform.position.x>6f)
+        {
+            transform.position = new Vector2(transform.position.x * -1, transform.position.y);
+        }
     }
 
     void Update()
