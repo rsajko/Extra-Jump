@@ -1,15 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-    [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D))]
     public class Mike : MonoBehaviour
     {
     public float movementSpeed = 10f;
     Rigidbody2D rb;
     float horizontal;
     private Transform death;
-
+    float Mikeumer = 0;
     void Start()
         {
             rb = GetComponent<Rigidbody2D>();
@@ -38,7 +39,7 @@ using UnityEngine;
     }
     void GameOver()
     {
-        print("Game END");
+        SceneManager.LoadScene(2);
     }
 
     void Update()
@@ -49,11 +50,12 @@ using UnityEngine;
         }
     void DeathMike()
     {
-        if(death.position.y<transform.position.y-5)
+
+        if (death.position.y < rb.position.y - 15)
         {
-            death.position = new Vector2(0, transform.position.y - 5);
+            death.position = new Vector2(0, rb.position.y - 15);
         }
-        if(death.position.y >transform.position.y)
+        if (death.position.y > rb.position.y)
         {
             GameOver();
         }
