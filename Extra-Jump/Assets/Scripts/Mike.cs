@@ -8,10 +8,12 @@ using UnityEngine;
     public float movementSpeed = 10f;
     Rigidbody2D rb;
     float horizontal;
+    private Transform death;
 
     void Start()
         {
             rb = GetComponent<Rigidbody2D>();
+        death = GameObject.Find("Death").transform;
         }
 
     void FixedUpdate()
@@ -34,6 +36,10 @@ using UnityEngine;
             transform.position = new Vector2(transform.position.x * -1, transform.position.y);
         }
     }
+    void GameOver()
+    {
+        print("Game END");
+    }
 
     void Update()
         {
@@ -41,5 +47,16 @@ using UnityEngine;
             velocity.x = 0f;
             rb.velocity = velocity;
         }
+    void DeathMike()
+    {
+        if(death.position.y<transform.position.y-5)
+        {
+            death.position = new Vector2(0, transform.position.y - 5);
+        }
+        if(death.position.y >transform.position.y)
+        {
+            GameOver();
+        }
+    }
     }
 
