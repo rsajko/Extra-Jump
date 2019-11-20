@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Menu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Sprite button_first, button_two;
 
-    // Update is called once per frame
-    void Update()
+ public void OnMouseDown()
     {
-        
+        GetComponent<SpriteRenderer>().sprite = button_two;
+    }
+  public  void OnMouseUp()
+    {
+        GetComponent<SpriteRenderer>().sprite = button_first;
     }
 }
