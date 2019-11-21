@@ -13,6 +13,7 @@ using UnityEngine.SceneManagement;
     bool move = true;   
     public bool refreshCamera;
     public GameObject pLost;
+
     void Start()
         {
             rb = GetComponent<Rigidbody2D>();
@@ -55,11 +56,13 @@ using UnityEngine.SceneManagement;
     {
         if(ob.gameObject.tag =="Death")
         {
-            move = false;
+            Time.timeScale = 0;
+            //move = false;
+            // Destroy(gameObject);
             pLost.SetActive(true);
             //SceneManager.LoadScene(2);
+            
         }
-
     }
     }
 

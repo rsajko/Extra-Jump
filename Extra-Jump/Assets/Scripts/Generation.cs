@@ -6,7 +6,6 @@ public class Generation : MonoBehaviour
 {
 
     public GameObject platformPrefab;
-
     public int numberOfPlatforms = 200;
     public float levelWidth = 3f;
     public float minY = .2f;
@@ -16,7 +15,6 @@ public class Generation : MonoBehaviour
     {
 
         Vector3 spawnPosition = new Vector3();
-
         for (int i = 0; i < numberOfPlatforms; i++)
         {
             spawnPosition.y += Random.Range(minY, maxY);
