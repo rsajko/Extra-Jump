@@ -28,5 +28,6 @@ public class score_script : MonoBehaviour
         }
         int score1 = (int)score;
         txt.text = score1.ToString();
+        PlayerPrefs.SetInt("Score", score1);
     }
 }

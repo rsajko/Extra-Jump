@@ -356,8 +356,8 @@ GameObject:
   m_Component:
   - component: {fileID: 711494037}
   - component: {fileID: 711494036}
-  - component: {fileID: 711494039}
   - component: {fileID: 711494038}
+  - component: {fileID: 711494039}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
@@ -784,8 +784,8 @@ GameObject:
   - component: {fileID: 2010843238}
   - component: {fileID: 2010843237}
   - component: {fileID: 2010843236}
-  - component: {fileID: 2010843239}
   - component: {fileID: 2010843235}
+  - component: {fileID: 2010843239}
   m_Layer: 0
   m_Name: Settings
   m_TagString: Untagged
@@ -994,10 +994,10 @@ GameObject:
   - component: {fileID: 2030461689}
   - component: {fileID: 2030461688}
   - component: {fileID: 2030461687}
-  - component: {fileID: 2030461690}
   - component: {fileID: 2030461686}
+  - component: {fileID: 2030461690}
   m_Layer: 0
-  m_Name: play
+  m_Name: Play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

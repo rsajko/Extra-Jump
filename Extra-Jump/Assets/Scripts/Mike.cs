@@ -10,7 +10,9 @@ using UnityEngine.SceneManagement;
     Rigidbody2D rb;
     float horizontal;
     private Transform death;
-    float Mikeumer = 0;
+    bool move = true;   
+    public bool refreshCamera;
+    public GameObject pLost;
     void Start()
         {
             rb = GetComponent<Rigidbody2D>();
@@ -27,7 +29,7 @@ using UnityEngine.SceneManagement;
         {
             horizontal = Input.GetAxis("Horizontal");
         }
-        rb.velocity = new Vector2(Input.GetAxis("Horizontal") * 10f, rb.velocity.y);
+       if(move == true) rb.velocity = new Vector2(Input.GetAxis("Horizontal") * 10f, rb.velocity.y);
         if (transform.position.x <-6f)
         {
             transform.position = new Vector2(transform.position.x * -1, transform.position.y);
@@ -47,18 +49,17 @@ using UnityEngine.SceneManagement;
             Vector2 velocity = rb.velocity;
             velocity.x = 0f;
             rb.velocity = velocity;
-        }
-    void DeathMike()
+        refreshCamera = true;
+    }
+    void OnCollisionExit2D(Collision2D ob)
     {
+        if(ob.gameObject.tag =="Death")
+        {
+            move = false;
+            pLost.SetActive(true);
+            //SceneManager.LoadScene(2);
+        }
 
-        if (death.position.y < rb.position.y - 15)
-        {
-            death.position = new Vector2(0, rb.position.y - 15);
-        }
-        if (death.position.y > rb.position.y)
-        {
-            GameOver();
-        }
     }
     }
 

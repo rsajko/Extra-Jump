@@ -14,14 +14,21 @@ public class Buttons : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().sprite = button_first;
     }
-    void MouseUpAsButton()
+    void OnMouseUpAsButton()
     {
         switch(gameObject.name){
             case "Play":
                 SceneManager.LoadScene(1);
                 break;
             case "Exit":
-                Application.Quit();
+               
+              Application.Quit();
+                break;
+            case "Menu":
+                SceneManager.LoadScene(0);
+                break;
+            case "Retry":
+                SceneManager.LoadScene(1);
                 break;
         }
     }

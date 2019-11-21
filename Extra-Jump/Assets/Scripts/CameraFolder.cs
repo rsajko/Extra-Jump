@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class CameraFolder : MonoBehaviour
 {
     public Transform who;
     Vector3 position;
