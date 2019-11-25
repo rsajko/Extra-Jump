@@ -9,10 +9,13 @@ public class score_script : MonoBehaviour
     public float score;
     private Transform target;
     public Text txt;
+    int score1;
+    public Text currentScore;
 
     void Start()
     {
         target = GameObject.Find("Mike").transform;
+        currentScore.text = "Your score: " + score1;
     }
     void Update()
     {
@@ -28,6 +31,7 @@ public class score_script : MonoBehaviour
         }
         int score1 = (int)score;
         txt.text = score1.ToString();
-        PlayerPrefs.SetInt("Score", score1);
+      //  PlayerPrefs.SetInt("ScoreGameOverTXT", score1);
     }
+
 }

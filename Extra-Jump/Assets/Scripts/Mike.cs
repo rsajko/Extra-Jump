@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
     {
     public float movementSpeed = 10f;
     Rigidbody2D rb;
-    float horizontal;
+    public float horizontal;
     private Transform death;
     bool move = true;   
     public bool refreshCamera;
@@ -22,15 +22,18 @@ using UnityEngine.SceneManagement;
 
     void FixedUpdate()
     {
-        if (Application.platform == RuntimePlatform.Android)
+        Vector2 acceliration = Input.acceleration;
+       if (Application.platform == RuntimePlatform.Android)
         {
             horizontal = Input.acceleration.x;
+            if (move == true) rb.velocity = new Vector2(acceliration.x * 10f, rb.velocity.y);
         }
         else
         {
             horizontal = Input.GetAxis("Horizontal");
+            if (move == true) rb.velocity = new Vector2(Input.GetAxis("Horizontal") * 10f, rb.velocity.y);
         }
-       if(move == true) rb.velocity = new Vector2(Input.GetAxis("Horizontal") * 10f, rb.velocity.y);
+        
         if (transform.position.x <-6f)
         {
             transform.position = new Vector2(transform.position.x * -1, transform.position.y);
@@ -51,17 +54,14 @@ using UnityEngine.SceneManagement;
             velocity.x = 0f;
             rb.velocity = velocity;
         refreshCamera = true;
+
     }
     void OnCollisionExit2D(Collision2D ob)
     {
         if(ob.gameObject.tag =="Death")
         {
             Time.timeScale = 0;
-            //move = false;
-            // Destroy(gameObject);
-            pLost.SetActive(true);
-            //SceneManager.LoadScene(2);
-            
+            pLost.SetActive(true);          
         }
     }
     }
