@@ -14,3 +14,5 @@ Extra-Jump - это аркадная игра для вашего смартфо
 [Графический материал](https://github.com/rsajko/Extra-Jump/tree/master/Мокапы)
 
 [Правила игры](https://github.com/rsajko/Extra-Jump/blob/master/Правила%20игры/Правила%20игры.md)
+
+[Тестирование](https://github.com/rsajko/Extra-Jump/blob/master/Тестирование/Test%20Plan.md)
